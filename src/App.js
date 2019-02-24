@@ -1,24 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./gwangmun.jpg";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
+          <h1>Sepio</h1>
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+          <form
+            className="form"
+            method="get"
+            action="http://dev-env.jjdnmu7tuc.us-west-1.elasticbeanstalk.com"
           >
-            Learn React
-          </a>
+            <input type="text" name="recipientName" defaultValue="Anonymous" />
+            <input
+              type="text"
+              name="recipientEmail"
+              defaultValue="test@email.com"
+            />
+            <button type="submit" style={{marginTop: 30}}>Sign Waiver</button>
+          </form>
         </header>
       </div>
     );
